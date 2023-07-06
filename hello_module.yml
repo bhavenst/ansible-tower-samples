@@ -23,5 +23,6 @@
   tasks:
     - name: Run another module
       lineinfile:
+        create: true
         path: /tmp/junk
         line: 'bhavenst was here'
