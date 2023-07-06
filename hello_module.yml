@@ -1,0 +1,27 @@
+- name: Hello World Sample
+  hosts: localhost,all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello Bryan!"
+
+- name: Use a module
+  hosts: localhost,all
+  tasks:
+    - name: Run a module
+      command: ls
+
+- name: Use another module
+  hosts: localhost,all
+  tasks:
+    - name: Run another module
+      pause:
+        seconds: 5
+
+- name: Use another module
+  hosts: localhost,all
+  tasks:
+    - name: Run another module
+      lineinfile:
+        path: /tmp/junk
+        line: 'bhavenst was here'
